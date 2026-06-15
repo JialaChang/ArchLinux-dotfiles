@@ -1,0 +1,4 @@
+clipse
+oh-my-posh
+yay
+# Exported on 2026-06-16_01:40

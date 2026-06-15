@@ -1,0 +1,2 @@
+[aur] clipse
+[aur] oh-my-posh
