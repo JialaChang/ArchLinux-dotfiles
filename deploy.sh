@@ -24,8 +24,8 @@ deploy() {
 
   if [ -d "$src" ]; then
     echo "    -> Deploying dir $src to $dest..."
-    mkdir -p "$dest"
-    cp -r "$src/." "$dest/"
+    rm -rf "$dest"
+    cp -r "$src" "$dest"
   elif [ -f "$src" ]; then
     echo "    -> Deploying file $src to $dest..."
     mkdir -p "$(dirname "$dest")"
@@ -45,9 +45,9 @@ backup_all() {
 
 # deploy files {src} {dest}
 deploy_all() {
-  deploy "./hypr" "$HOME/.config"
-  deploy "./kitty" "$HOME/.config"
-  deploy "./nvim" "$HOME/.cofig"
+  deploy "./hypr" "$HOME/.config/hypr"
+  deploy "./kitty" "$HOME/.config/kitty"
+  deploy "./nvim" "$HOME/.config/nvim"
   deploy "./bashrc" "$HOME/.bashrc"
 }
 

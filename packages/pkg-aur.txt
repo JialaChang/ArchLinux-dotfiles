@@ -1,4 +1,5 @@
 clipse
 oh-my-posh
+wlogout
 yay
-# Exported on 2026-06-16_15:34
+# Exported on 2026-06-16_17:38

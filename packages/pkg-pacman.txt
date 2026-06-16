@@ -2,6 +2,7 @@
 base
 base-devel
 bat
+btop
 dolphin
 dunst
 efibootmgr
@@ -34,6 +35,7 @@ libpulse
 libva-intel-driver
 linux
 linux-firmware
+linux-headers
 nano
 neovide
 neovim
@@ -44,6 +46,9 @@ noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
 npm
+nvidia-open-dkms
+nvidia-settings
+nvidia-utils
 os-prober
 otf-codenewroman-nerd
 pipewire
@@ -56,12 +61,14 @@ qt5-wayland
 qt6-wayland
 resvg
 rofi
+ruby
 sddm
 slurp
 smartmontools
 sof-firmware
 sudo
 ttf-dejavu
+ttf-jetbrains-mono-nerd
 ttf-liberation
 ufw
 unzip
@@ -84,4 +91,4 @@ xf86-video-nouveau
 yazi
 zoxide
 zram-generator
-# Exported on 2026-06-16_15:34
+# Exported on 2026-06-16_17:38
