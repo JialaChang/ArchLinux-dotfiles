@@ -13,6 +13,7 @@ export PATH="$HOME/.local/bin:$PATH"
 # nvim
 export EDITOR=nvim
 export VISUAL=nvim
+alias nv='neovide'
 
 # oh-my-posh
 eval "$(oh-my-posh init bash --config /usr/share/oh-my-posh/themes/catppuccin_frappe.omp.json)"

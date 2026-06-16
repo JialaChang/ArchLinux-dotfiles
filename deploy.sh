@@ -2,8 +2,6 @@
 
 cd "$(dirname "$0")"
 
-echo "==> Starting install Starle's dotfiles..."
-
 # funtions
 backup() {
   local target=$1
@@ -38,15 +36,33 @@ deploy() {
 }
 
 # backup files
-backup "$HOME/.config/hypr"
-backup "$HOME/.config/kitty"
-backup "$HOME/.config/nvim"
-backup "$HOME/.bashrc"
+backup_all() {
+  backup "$HOME/.config/hypr"
+  backup "$HOME/.config/kitty"
+  backup "$HOME/.config/nvim"
+  backup "$HOME/.bashrc"
+}
 
 # deploy files {src} {dest}
-deploy "./hypr" "$HOME/.config/hypr"
-deploy "./kitty" "$HOME/.config/kitty"
-deploy "./nvim" "$HOME/.cofig/nvim"
-deploy "./bashrc" "$HOME/.bashrc"
+deploy_all() {
+  deploy "./hypr" "$HOME/.config"
+  deploy "./kitty" "$HOME/.config"
+  deploy "./nvim" "$HOME/.cofig"
+  deploy "./bashrc" "$HOME/.bashrc"
+}
 
-echo "==> Success!"
+case "$1" in
+backup)
+  backup_all
+  echo "==> Backup all the files !"
+  ;;
+deploy)
+  deploy_all
+  echo "==> Deploy all the files !"
+  ;;
+*)
+  echo "Usage: ./deploy.sh [deploy|backup]"
+  echo "    deploy  - deploy all the settings"
+  echo "    backup - backup all your files will be replaced as .backup files"
+  ;;
+esac
