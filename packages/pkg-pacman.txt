@@ -28,17 +28,21 @@ intel-media-driver
 intel-ucode
 jq
 kitty
+lazygit
 less
 libpulse
 libva-intel-driver
 linux
 linux-firmware
 nano
+neovim
 networkmanager
 network-manager-applet
+nodejs
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
+npm
 os-prober
 otf-codenewroman-nerd
 pipewire
@@ -59,6 +63,7 @@ sudo
 ttf-dejavu
 ttf-liberation
 ufw
+unzip
 uwsm
 vim
 vulkan-intel
@@ -78,4 +83,4 @@ xf86-video-nouveau
 yazi
 zoxide
 zram-generator
-# Exported on 2026-06-16_01:40
+# Exported on 2026-06-16_13:32

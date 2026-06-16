@@ -1,0 +1,30 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+PS1='[\u@\h \W]\$ '
+export PATH="$HOME/.local/bin:$PATH"
+
+# nvim
+export EDITOR=nvim
+export VISUAL=nvim
+
+# oh-my-posh
+eval "$(oh-my-posh init bash --config /usr/share/oh-my-posh/themes/catppuccin_frappe.omp.json)"
+
+# eza
+alias ls='eza --icons=always --group-directories-first'
+alias ll='eza -la --icons=always --group-directories-first --git'
+alias lt='eza --tree --level=2 --icons=always --group-directories-first'
+alias la='eza -a --icons=always --group-directories-first'
+
+# bat
+alias cat='bat'
+
+# fastfetch
+alias ff='clear && fastfetch'
