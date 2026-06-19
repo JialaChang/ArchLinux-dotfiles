@@ -46,3 +46,4 @@ alias ff='clear && fastfetch'
 alias lgit='lazygit'
 
 alias spotify='spotify &disown'
+alias discord='discord &> /dev/null &disown'

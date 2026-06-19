@@ -63,10 +63,12 @@ window#waybar {
 
 #cpu {
   border-top: 3px solid @secondary;
+  font-weight: bold;
 }
 
 #memory {
   border-top: 3px solid @tertiary;
+  font-weight: bold;
 }
 
 #idle_inhibitor {
@@ -108,10 +110,12 @@ window#waybar {
 
 #pulseaudio {
   border-top: 3px solid @primary;
+  font-weight: bold;
 }
 
 #network {
   border-top: 3px solid @secondary;
+  font-weight: bold;
 }
 
 #backlight {

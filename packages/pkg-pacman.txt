@@ -5,6 +5,8 @@ base-devel
 bat
 btop
 cava
+cmatrix
+discord
 dolphin
 dunst
 efibootmgr
@@ -75,6 +77,7 @@ ttf-jetbrains-mono-nerd
 ttf-liberation
 ufw
 unzip
+uv
 uwsm
 vim
 vulkan-intel
@@ -97,4 +100,4 @@ zram-generator
 zsh
 zsh-autosuggestions
 zsh-syntax-highlighting
-# Exported on 2026-06-19_01:38
+# Exported on 2026-06-19_23:13

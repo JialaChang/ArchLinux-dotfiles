@@ -4,6 +4,7 @@ libcava
 matugen-bin
 oh-my-posh
 spotify
+visual-studio-code-bin
 yay
 zsh-theme-powerlevel10k-git
-# Exported on 2026-06-19_01:38
+# Exported on 2026-06-19_23:13

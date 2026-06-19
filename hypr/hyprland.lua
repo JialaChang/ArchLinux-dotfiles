@@ -289,7 +289,8 @@ hl.bind(
 	)
 )
 -- toggle opacity
-hl.bind(mainMod .. " + CTRL + O", hl.dsp.window.tag({ tag = "peek" }))
+hl.bind(mainMod .. " + CTRL + P", hl.dsp.window.tag({ tag = "peek" }))
+hl.bind(mainMod .. " + CTRL + O", hl.dsp.window.tag({ tag = "nopeek" }))
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left", hl.dsp.focus({ direction = "left" }))
@@ -425,4 +426,8 @@ hl.window_rule({
 hl.window_rule({
 	match = { tag = "peek" },
 	opacity = "0.3 override",
+})
+hl.window_rule({
+	match = { tag = "nopeek" },
+	opacity = "1.0 override",
 })
