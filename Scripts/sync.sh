@@ -38,10 +38,10 @@ sync_dir ~/.config/wallpapers "$ROOT_DIR/config/wallpapers"
 sync_file ~/.local/bin/wallset "$ROOT_DIR/local/bin/wallset"
 sync_file ~/.local/bin/wallset-backend "$ROOT_DIR/local/bin/wallset-backend"
 
-sync_file ~/.bashrc "$ROOT_DIR/config/bashrc"
-sync_file ~/.zshrc "$ROOT_DIR/config/zshrc"
+sync_file ~/.bashrc "$ROOT_DIR/bashrc"
+sync_file ~/.zshrc "$ROOT_DIR/zshrc"
 
 echo "==> Exporting packages..."
-"$SCRIPT_DIR/pkg.sh" export
+"$ROOT_DIR/Scripts/pkg.sh" export
 
 echo "==> Done!"

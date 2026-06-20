@@ -6,5 +6,4 @@ oh-my-posh
 spotify
 visual-studio-code-bin
 yay
-zsh-theme-powerlevel10k-git
-# Exported on 2026-06-20_17:38
+# Exported on 2026-06-21_00:32

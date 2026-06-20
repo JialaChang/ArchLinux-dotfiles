@@ -1,1 +1,4 @@
 pkg-failed.txt
+**/hypr/colors/colors.lua
+**/waybar/colors.css
+**/kitty/colors/colors.conf
