@@ -1,6 +1,8 @@
 #!/bin/bash
 
-cd "$(dirname "$0")"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+ROOT_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
+cd "$ROOT_DIR"
 
 # funtions
 backup() {
@@ -48,12 +50,12 @@ backup_all() {
 
 # deploy files {src} {dest}
 deploy_all() {
-  deploy "./hypr" "$HOME/.config/hypr"
-  deploy "./kitty" "$HOME/.config/kitty"
-  deploy "./nvim" "$HOME/.config/nvim"
-  deploy "./waybar" "$HOME/.config/waybar"
-  deploy "./bashrc" "$HOME/.bashrc"
-  deploy "./zshrc" "$HOME/.zshrc"
+  deploy "$ROOT_DIR/config/hypr" "$HOME/.config/hypr"
+  deploy "$ROOT_DIR/config/kitty" "$HOME/.config/kitty"
+  deploy "$ROOT_DIR/config/nvim" "$HOME/.config/nvim"
+  deploy "$ROOT_DIR/config/waybar" "$HOME/.config/waybar"
+  deploy "$ROOT_DIR/config/bashrc" "$HOME/.bashrc"
+  deploy "$ROOT_DIR/config/zshrc" "$HOME/.zshrc"
 }
 
 case "$1" in
@@ -63,6 +65,7 @@ backup)
   ;;
 deploy)
   deploy_all
+  hyprctl reload
   echo "==> Deploy all the files !"
   ;;
 *)

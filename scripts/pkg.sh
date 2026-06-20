@@ -5,10 +5,12 @@ pacman_fail=0
 aur_succ=0
 aur_fail=0
 
-SCRIPT_DIR="$(dirname "$0")"
-PACMAN_TXT="$SCRIPT_DIR/packages/pkg-pacman.txt"
-AUR_TXT="$SCRIPT_DIR/packages/pkg-aur.txt"
-FAILED_TXT="$SCRIPT_DIR/packages/pkg-failed.txt"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+ROOT_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
+
+PACMAN_TXT="$ROOT_DIR/packages/pkg-pacman.txt"
+AUR_TXT="$ROOT_DIR/packages/pkg-aur.txt"
+FAILED_TXT="$ROOT_DIR/packages/pkg-failed.txt"
 
 export_packages() {
   echo "==> Exporting package list..."
@@ -78,7 +80,7 @@ install_packages() {
 
   if [ -s "$FAILED_TXT" ]; then
     echo ""
-    echo "==> Failed packages logged to 'packages/failed-pkg.txt'"
+    echo "==> Failed packages logged to 'packages/pkg-failed.txt'"
     echo "# Logged on $(date +%Y-%m-%d_%H:%M)" >>"$FAILED_TXT"
     cat "$FAILED_TXT"
   fi

@@ -1,6 +1,7 @@
 #!/bin/bash
 
-SCRIPT_DIR="$(dirname "$0")"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+ROOT_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
 
 sync_dir() {
   local src=$1
@@ -26,12 +27,12 @@ sync_file() {
 }
 
 echo "==> Syncing configs..."
-sync_dir ~/.config/hypr "$SCRIPT_DIR/hypr"
-sync_dir ~/.config/kitty "$SCRIPT_DIR/kitty"
-sync_dir ~/.config/nvim "$SCRIPT_DIR/nvim"
-sync_dir ~/.config/waybar "$SCRIPT_DIR/waybar"
-sync_file ~/.bashrc "$SCRIPT_DIR/bashrc"
-sync_file ~/.zshrc "$SCRIPT_DIR/zshrc"
+sync_dir ~/.config/hypr "$ROOT_DIR/config/hypr"
+sync_dir ~/.config/kitty "$ROOT_DIR/config/kitty"
+sync_dir ~/.config/nvim "$ROOT_DIR/config/nvim"
+sync_dir ~/.config/waybar "$ROOT_DIR/config/waybar"
+sync_file ~/.bashrc "$ROOT_DIR/config/bashrc"
+sync_file ~/.zshrc "$ROOT_DIR/config/zshrc"
 
 echo "==> Exporting packages..."
 "$SCRIPT_DIR/pkg.sh" export
