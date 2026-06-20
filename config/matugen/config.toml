@@ -1,0 +1,72 @@
+[color_adjustment]
+saturation = -100
+contrast = 0
+
+[config.custom_colors.success]
+color = "#358738"
+blend = true
+
+[config.custom_colors.blue]
+color = "#3f597b"
+blend = true
+
+[config.custom_colors.red]
+color = "#9a4141"
+blend = true
+
+[config.custom_colors.yellow]
+color = "#c0ba17"
+blend = true
+
+[config.wallpaper]
+command = "hyprpaper"
+set = false
+arguments = ["img", "--transition-type", "center"]
+
+[templates.hyprland]
+input_path = '~/.config/matugen/templates/hyprland-colors.lua'
+output_path = '~/.config/hypr/colors/colors.lua'
+post_hook = 'hyprctl reload'
+
+[templates.kitty]
+input_path = '~/.config/matugen/templates/kitty-colors.conf'
+output_path = '~/.config/kitty/colors/colors.conf'
+
+
+[templates.rofi]
+input_path = '~/.config/matugen/templates/rofi-colors.rasi'
+output_path = '~/.config/rofi/colors/colors-matugen.rasi'
+
+
+[templates.waybar]
+input_path = '~/.config/matugen/templates/colors.css'
+output_path = '~/.config/waybar/colors.css'
+
+
+[templates.swaync]
+input_path = '~/.config/matugen/templates/colors-swaync.css'
+output_path = '~/.config/swaync/colors-swaync.css'
+
+
+[templates.btop]
+input_path = '~/.config/matugen/templates/btop.theme'
+output_path = '~/.config/btop/themes/matugen.theme'
+
+
+[templates.starship]
+input_path = '~/.config/matugen/templates/starship-colors.toml'
+output_path = '~/.config/starship.toml'
+
+
+# GTK apps
+
+[templates.gtk3]
+input_path = '~/.config/matugen/templates/gtk-colors.css'
+output_path = '~/.config/gtk-3.0/colors.css'
+post_hook = 'gsettings set org.gnome.desktop.interface gtk-theme ""; gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-{{mode}}'
+
+[templates.gtk4]
+input_path = '~/.config/matugen/templates/gtk-colors.css'
+output_path = '~/.config/gtk-4.0/colors.css'
+
+

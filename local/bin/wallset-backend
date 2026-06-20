@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+FILE=$1
+
+if [ -z "$FILE" ]; then
+  notify-send "Can not find wallpaper files..."
+  exit 1
+fi
+
+# Change wallpaper
+awww img "$FILE" \
+  --transition-type any \
+  --transition-duration 1.4 \
+  --transition-fps 60 \
+  --transition-step 50
+
+matugen image "$FILE"
+echo "$FILE" >~/.cache/last_wallpaper
+pkill waybar && waybar &
+swaync-client -rs &
+
+notify-send "Wallpaper already change into $(basename "$FILE")"
