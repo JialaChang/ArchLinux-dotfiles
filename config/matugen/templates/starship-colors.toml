@@ -1,12 +1,12 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = '''
-[░▒▓](matugen-color3)[󰣇](fg:matugen-color10 bg:matugen-color3)$username[](bg:matugen-color1 fg:matugen-color3)$directory[](fg:matugen-color1 bg:matugen-color11)$git_branch$git_status[](fg:matugen-color11 bg:matugen-color11)$nodejs$rust$golang$php[](fg:matugen-color11 bg:matugen-color7)$conda[ ](fg:matugen-color7)$line_break$character'''
+[󰣇 ](fg:matugen-color3)$username[ ](fg:matugen-color3)$directory[ ](fg:matugen-color1)$git_branch$git_status$nodejs$rust$golang$php$line_break$character'''
 
 palette = 'colors'
 
 [palettes.colors]
-mustard = '#af8700' # example
+mustard = '#af8700'
 matugen-color1 = '{{colors.primary_fixed_dim.default.hex}}'
 matugen-color2 = '{{colors.on_primary.default.hex}}'
 matugen-color3 = '{{colors.on_surface_variant.default.hex}}'
@@ -19,70 +19,55 @@ matugen-color9 = '{{colors.tertiary.default.hex}}'
 matugen-color10 = '{{colors.on_primary_fixed.default.hex}}'
 matugen-color11 = '{{colors.primary_container.default.hex}}'
 matugen-color12 = '{{colors.on_secondary.default.hex}}'
-color0 = 'black'
-color1 = 'red'
-color2 = 'green'
-color3 = 'yellow'
-color4 = 'blue'
-color5 = 'magenta'
-color6 = 'cyan'
-color7 = 'white'
-color8 = '#8bd5b5'
-color9 = '#a6cce0'
-color10 = '#002115'
-color11 = '#00513a'
-color12 = '#1f352b'
 
 [username]
 show_always = true
-style_user = "fg:matugen-color10 bg:matugen-color3"
-style_root = "fg:matugen-color10 bg:matugen-color3"
-format = "[ $user ]($style)"
+style_user = "fg:matugen-color3 bold"
+style_root = "fg:matugen-color8 bold"
+format = "[ $user]($style)"
 disabled = false
 
 [directory]
-style = "fg:matugen-color7 bg:matugen-color1"
-format = "[ $path ]($style)"
+style = "fg:matugen-color1 bold"
+format = "[ 󰉋 $path]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
 
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = "󰇚 "
+"Music" = " "
+"Pictures" = " "
+"Coding" = "󰨞 "
+
 [git_branch]
-symbol = ""
-style = "bg:matugen-color11"
-format = '[ $symbol $branch ](fg:matugen-color7 bg:matugen-color11)'
+symbol = ""
+format = '[ $symbol $branch](fg:matugen-color9)'
 
 [git_status]
-style = "bg:matugen-color11"
-format = '[($all_status$ahead_behind )](fg:matugen-color7 bg:matugen-color11)'
+format = '[($all_status$ahead_behind)](fg:matugen-color9)'
 
 [nodejs]
 symbol = ""
-style = "bg:matugen-color11"
-format = '[[ $symbol ($version) ](fg:matugen-color7 bg:matugen-color11)]($style)'
+format = '[ $symbol ($version)](fg:matugen-color11)'
 
 [rust]
 symbol = ""
-style = "bg:matugen-color11"
-format = '[[ $symbol ($version) ](fg:matugen-color7 bg:matugen-color11)]($style)'
+format = '[ $symbol ($version)](fg:matugen-color8)'
 
 [golang]
 symbol = ""
-style = "bg:matugen-color11"
-format = '[[ $symbol ($version) ](fg:matugen-color7 bg:matugen-color11)]($style)'
+format = '[ $symbol ($version)](fg:matugen-color1)'
 
 [php]
 symbol = ""
-style = "bg:matugen-color11"
-format = '[[ $symbol ($version) ](fg:matugen-color7 bg:matugen-color11)]($style)'
-
-[conda]
-symbol = " "
-style = "bg:matugen-color12"
-format = '[ $symbol$environment ](fg:matugen-color3 bg:matugen-color12)'
-ignore_base = false
+format = '[ $symbol ($version)](fg:matugen-color9)'
 
 [time]
 disabled = false
 time_format = "%R"
-style = "bg:matugen-color12"
-format = '[[  $time ](fg:matugen-color3 bg:matugen-color12)]($style)'
+format = '[  $time](fg:matugen-color3)'
+
+[character]
+success_symbol = "[❯](fg:matugen-color1 bold)"
+error_symbol = "[❯](fg:matugen-color8 bold)"
