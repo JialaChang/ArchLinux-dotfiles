@@ -45,7 +45,10 @@ backup_all() {
   backup "$HOME/.config/nvim"
   backup "$HOME/.config/waybar"
   backup "$HOME/.config/matugen"
+  backup "$HOME/.config/rofi"
   backup "$HOME/.config/wallpapers"
+
+  backup "$HOME/.config/starship.toml"
 
   backup "$HOME/.local/bin/wallset"
   backup "$HOME/.local/bin/wallset-backend"
@@ -61,7 +64,10 @@ deploy_all() {
   deploy "$ROOT_DIR/config/nvim" "$HOME/.config/nvim"
   deploy "$ROOT_DIR/config/waybar" "$HOME/.config/waybar"
   deploy "$ROOT_DIR/config/matugen" "$HOME/.config/matugen"
+  deploy "$ROOT_DIR/config/rofi" "$HOME/.config/rofi"
   deploy "$ROOT_DIR/config/wallpapers" "$HOME/.config/wallpapers"
+
+  deploy "$ROOT_DIR/config/starship.toml" "$HOME/.config/starship.toml"
 
   deploy "$ROOT_DIR/local/bin/wallset" "$HOME/.local/bin/wallset"
   deploy "$ROOT_DIR/local/bin/wallset-backend" "$HOME/.local/bin/wallset-backend"

@@ -6,4 +6,4 @@ oh-my-posh
 spotify
 visual-studio-code-bin
 yay
-# Exported on 2026-06-21_11:36
+# Exported on 2026-06-21_21:25

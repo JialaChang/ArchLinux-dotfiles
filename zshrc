@@ -32,8 +32,11 @@ alias ls='eza --icons=always --group-directories-first'
 alias ll='eza -la --icons=always --group-directories-first --git'
 alias lt='eza --tree --level=2 --icons=always --group-directories-first'
 alias la='eza -a --icons=always --group-directories-first'
+
 alias cat='bat'
 alias ff='clear && fastfetch'
 alias lgit='lazygit'
+
 alias spotify='spotify &disown'
 alias discord='discord &> /dev/null &disown'
+alias rofi='rofi -show drun -theme ~/.config/rofi/launchers/type-1/style-7.rasi'

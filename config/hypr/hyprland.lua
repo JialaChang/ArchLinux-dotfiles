@@ -36,7 +36,7 @@ hl.monitor({
 -- Set programs that you use
 local terminal = "kitty"
 local fileManager = "dolphin"
-local menu = "hyprlauncher"
+local menu = "rofi -show drun -theme ~/.config/rofi/launchers/type-1/style-7.rasi"
 
 -------------------
 ---- AUTOSTART ----
@@ -270,12 +270,12 @@ hl.bind(
 )
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
+-- hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit")) -- dwindle only
 
 -- My personal keybinds
-hl.bind(mainMod .. "+ space", hl.dsp.exec_cmd("wofi --show drun"))
+hl.bind(mainMod .. "+ space", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. "+ B", hl.dsp.exec_cmd("firefox"))
 -- screenshot
 hl.bind(

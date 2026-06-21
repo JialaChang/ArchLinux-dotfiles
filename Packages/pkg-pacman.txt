@@ -27,6 +27,7 @@ gst-plugin-pipewire
 gum
 htop
 hyprland
+hyprlock
 hyprpaper
 imagemagick
 intel-media-driver
@@ -101,4 +102,4 @@ zram-generator
 zsh
 zsh-autosuggestions
 zsh-syntax-highlighting
-# Exported on 2026-06-21_11:36
+# Exported on 2026-06-21_21:25
