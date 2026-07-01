@@ -277,6 +277,7 @@ hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit")) -- dwindle only
 -- My personal keybinds
 hl.bind(mainMod .. "+ space", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. "+ B", hl.dsp.exec_cmd("firefox"))
+hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("bash -c 'pkill waybar || waybar & disown'"))
 -- screenshot
 hl.bind(
 	"CTRL + P",
