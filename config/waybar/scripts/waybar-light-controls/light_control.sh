@@ -8,20 +8,24 @@ light=$(<"$CONFIG")
 
 if [ "$MODE" == "up" ]; then
 
-        light=$((light + 10))
+        light=$((light + 1))
         if [ "$light" -gt 100 ]; then
                 light=100
         fi
 
 elif [ "$MODE" == "down" ]; then
 
-        light=$((light - 10))
+        light=$((light - 1))
         if [ "$light" -lt 20 ]; then
                 light=20
         fi     
 
+elif [ "$MODE" == "reset" ]; then
+
+        light=100
+
 fi
 echo "$light" > "$CONFIG"             
-
+echo "$light"
 
 hyprctl hyprsunset gamma "$light" > /dev/null 2>&1

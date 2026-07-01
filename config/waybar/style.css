@@ -118,16 +118,21 @@ window#waybar {
   font-weight: bold;
 }
 
+#custom-light,
+#custom-temperature,
 #backlight {
   border-top: 3px solid @tertiary;
+  font-weight: bold;
 }
 
 #battery {
   border-top: 3px solid @primary;
+  font-weight: bold;
 }
 
 #bluetooth {
   border-top: 3px solid @secondary;
+  font-weight: bold;
 }
 
 #custom-swaync {
@@ -155,7 +160,8 @@ window#waybar {
 #clock:hover,
 #battery:hover,
 #pulseaudio:hover,
-#network:hover,
+#custom-light:hover,
+#custom-temperature:hover ,
 #backlight:hover,
 #cpu:hover,
 #memory:hover,

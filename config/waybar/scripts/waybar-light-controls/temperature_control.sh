@@ -8,20 +8,24 @@ temperature=$(<"$CONFIG")
 
 if [ "$MODE" == "up" ]; then
 
-	temperature=$((temperature + 300))
-        if [ "$temperature" -gt 6500 ]; then
-                temperature=6500
+	temperature=$((temperature + 50))
+        if [ "$temperature" -gt 7500 ]; then
+                temperature=7500
         fi
 
 elif [ "$MODE" == "down" ]; then
 
-        temperature=$((temperature - 300))
-        if [ "$temperature" -lt 1500 ]; then
-                temperature=1500
+        temperature=$((temperature - 50))
+        if [ "$temperature" -lt 4500 ]; then
+                temperature=4500
         fi
+
+elif [ "$MODE" == "reset" ]; then
+
+        temperature=6500
 
 fi
 echo "$temperature" > "$CONFIG"
-
 echo "$temperature"
+
 hyprctl hyprsunset temperature "$temperature" > /dev/null 2>&1

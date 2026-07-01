@@ -3,6 +3,10 @@ awww
 base
 base-devel
 bat
+blueman
+bluez
+bluez-utils
+brightnessctl
 btop
 cava
 cmatrix
@@ -29,6 +33,7 @@ htop
 hyprland
 hyprlock
 hyprpaper
+hyprsunset
 imagemagick
 intel-media-driver
 intel-ucode
